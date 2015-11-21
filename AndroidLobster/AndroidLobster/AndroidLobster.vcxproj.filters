@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>c7d4a3ae-fff6-40bc-bcfd-412ffbdca2eb</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\values">
+      <UniqueIdentifier>04f257a0-5a75-49b6-b191-517af4cdbabd</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{3718a306-d858-4143-88ee-1b2690eee424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\fi">
+      <UniqueIdentifier>{06821512-79b7-4c9f-a797-297ef80e55b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\fi\lobster">
+      <UniqueIdentifier>{4dbebfb6-263c-46ef-9bb7-bd78175df720}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="jni">
+      <UniqueIdentifier>{9438a9b5-6776-4cf3-ac06-15efe095e044}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidBuild Include="AndroidManifest.xml" />
+    <AndroidBuild Include="res\values\strings.xml">
+      <Filter>res\values</Filter>
+    </AndroidBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <JCompile Include="src\fi\lobster\AndroidLobster.java">
+      <Filter>src\fi\lobster</Filter>
+    </JCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="jni\AndroidLobster.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
