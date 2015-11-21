@@ -7,12 +7,12 @@ ToolRootPath=F:\Programs\NVIDIA\CodeWorks\apache-ant-1.8.2
 JdkRootPath=F:\Programs\NVIDIA\CodeWorks\jdk1.7.0_71
 ToolchainPlugin=android
 ToolchainRootPath=F:\Programs\NVIDIA\CodeWorks\android-ndk-r10e
-OutputDir=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
-ProjectRoot=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\
+OutputDir=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
+ProjectRoot=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\
 ProjectName=AndroidLobster
 BuildTarget=Debug
-JavaSourceDir=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\src
-AndroidManifestLocation=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\AndroidManifest.xml
+JavaSourceDir=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src
+AndroidManifestLocation=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
 JarDirectories=
 JarDependencies=
 NativeLibDirectories=
@@ -20,7 +20,7 @@ NativeLibDependencies=
 AssetsDirectories=
 OverrideManifestApiLevels=True
 MinApiLevel=android-9
-TargetApiLevel=android-19
+TargetApiLevel=android-15
 MaxApiLevel=
 SecurePropertiesLocation=
 IsFastDeployEnabled=True
@@ -31,11 +31,11 @@ PreBuildCommand=
 AdditionalOptions=
 
 JavaSources:
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\src\fi\lobster\AndroidLobster.java
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\AndroidLobster.java
 
 AndroidBuildSources:
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\AndroidManifest.xml
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\res\values\strings.xml
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\res\values\strings.xml
 
 Sources:
-C:\Users\Jallu\Desktop\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so
+F:\GitRepos\AndroiDemo\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so
