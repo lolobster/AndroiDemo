@@ -30,6 +30,15 @@
     <JCompile Include="src\fi\lobster\AndroidLobster.java">
       <Filter>src\fi\lobster</Filter>
     </JCompile>
+    <JCompile Include="GL2JNIActivity.java">
+      <Filter>src\fi\lobster</Filter>
+    </JCompile>
+    <JCompile Include="GL2JNILib.java">
+      <Filter>src\fi\lobster</Filter>
+    </JCompile>
+    <JCompile Include="GL2JNIView.java">
+      <Filter>src\fi\lobster</Filter>
+    </JCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jni\AndroidLobster.cpp">

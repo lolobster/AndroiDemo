@@ -61,6 +61,9 @@
     <ClCompile Include="jni\AndroidLobster.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <JCompile Include="GL2JNIActivity.java" />
+    <JCompile Include="GL2JNILib.java" />
+    <JCompile Include="GL2JNIView.java" />
     <JCompile Include="src\fi\lobster\AndroidLobster.java" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
