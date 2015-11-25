@@ -35,5 +35,8 @@
     <ClCompile Include="jni\AndroidLobster.cpp">
       <Filter>jni</Filter>
     </ClCompile>
+    <ClCompile Include="gl_code.cpp">
+      <Filter>jni</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

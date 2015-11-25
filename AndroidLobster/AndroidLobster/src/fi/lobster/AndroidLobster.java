@@ -32,6 +32,8 @@ import android.os.Bundle;
 
 public class AndroidLobster extends Activity
 {
+
+private TextView tv;
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -39,6 +41,29 @@ public class AndroidLobster extends Activity
 		super.onCreate(savedInstanceState);
 
 		// Enter code here
+		 tv = new TextView(this);
+        tv.setText( "Starting..." );
+        setContentView(tv);
+		
+		Thread updateThread = new Thread(new Runnable() {
+			public void run() {
+				while (true) {
+					tv.post(new Runnable() {
+						public void run() {
+							tv.setText( headerText() );
+						}
+					});
+					try { Thread.sleep(1000); } catch (Exception e) { }
+					tv.post(new Runnable() {
+						public void run() {
+							tv.setText("");
+						}
+					});
+					try { Thread.sleep(1000); } catch (Exception e) { }
+				}
+			}
+		});
+		updateThread.start();
 	}
 
 	/**
@@ -46,7 +71,8 @@ public class AndroidLobster extends Activity
 	 * <code>Java_fi_lobster_AndroidLobster_androidlobsterNative</code>
 	 * for the implementation.
 	 */
-	public native void androidlobsterNative();
+	public native String headerText();
+	public native void lobsterSquare();
 
 	/* This is the static constructor used to load the
 	 * 'AndroidLobster' library when the class is

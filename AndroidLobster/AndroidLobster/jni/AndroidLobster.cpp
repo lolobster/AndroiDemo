@@ -8,8 +8,15 @@
 @param thiz Reference to Java this object
 */
 extern "C"
-JNIEXPORT void JNICALL
-Java_fi_lobster_AndroidLobster_androidlobsterNative( JNIEnv* env, jobject thiz )
+
+JNIEXPORT jstring JNICALL
+Java_fi_lobster_AndroidLobster_headerText( JNIEnv* env, jobject thiz )
 {
-	// Enter code here
+	return env->NewStringUTF("Hello World");
+}
+
+JNIEXPORT void JNICALL
+Java_fi_lobster_AndroidLobster_lobsterSquare()
+{
+
 }

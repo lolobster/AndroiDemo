@@ -2,17 +2,17 @@
 
 Configuration=Debug
 IsNdkBuildProject=False
-SdkRootPath=F:\Programs\NVIDIA\CodeWorks\android-sdk-windows
-ToolRootPath=F:\Programs\NVIDIA\CodeWorks\apache-ant-1.8.2
-JdkRootPath=F:\Programs\NVIDIA\CodeWorks\jdk1.7.0_71
+SdkRootPath=C:\NVPACK\android-sdk-windows
+ToolRootPath=C:\NVPACK\apache-ant-1.8.2
+JdkRootPath=C:\Program Files\Java\jdk1.7.0_79
 ToolchainPlugin=android
-ToolchainRootPath=F:\Programs\NVIDIA\CodeWorks\android-ndk-r10e
-OutputDir=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
-ProjectRoot=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\
+ToolchainRootPath=C:\NVPACK\android-ndk-r10c
+OutputDir=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
+ProjectRoot=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\
 ProjectName=AndroidLobster
 BuildTarget=Debug
-JavaSourceDir=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\src
-AndroidManifestLocation=C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\AndroidManifest.xml
+JavaSourceDir=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src
+AndroidManifestLocation=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
 JarDirectories=
 JarDependencies=
 NativeLibDirectories=
@@ -31,11 +31,11 @@ PreBuildCommand=
 AdditionalOptions=
 
 JavaSources:
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\src\fi\lobster\AndroidLobster.java
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\AndroidLobster.java
 
 AndroidBuildSources:
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\AndroidManifest.xml
-C:\Users\Jallu\Desktop\AndroidLobster\AndroidLobster\res\values\strings.xml
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\res\values\strings.xml
 
 Sources:
-C:\Users\Jallu\Desktop\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so

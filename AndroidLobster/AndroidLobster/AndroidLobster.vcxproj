@@ -57,6 +57,7 @@
     <AndroidBuild Include="res\values\strings.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="gl_code.cpp" />
     <ClCompile Include="jni\AndroidLobster.cpp" />
   </ItemGroup>
   <ItemGroup>
