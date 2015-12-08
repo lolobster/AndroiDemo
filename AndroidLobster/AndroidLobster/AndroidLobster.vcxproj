@@ -23,13 +23,13 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
-    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidTargetAPI>android-15</AndroidTargetAPI>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
-    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidTargetAPI>android-15</AndroidTargetAPI>
   </PropertyGroup>
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
-    <AndroidTargetAPI>android-19</AndroidTargetAPI>
+    <AndroidTargetAPI>android-15</AndroidTargetAPI>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -40,31 +40,41 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Tegra-Android'">
     <ClCompile>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)jni</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>android; GLESv2</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Tegra-Android'">
     <ClCompile>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)jni</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>android; GLESv2</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Tegra-Android'">
     <ClCompile>
       <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)jni</AdditionalIncludeDirectories>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>android; GLESv2</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <AndroidBuild Include="AndroidManifest.xml" />
     <AndroidBuild Include="res\values\strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="gl_code.cpp" />
-    <ClCompile Include="jni\AndroidLobster.cpp" />
+    <JCompile Include="src\fi\lobster\GL2JNIActivity.java" />
+    <JCompile Include="src\fi\lobster\GL2JNILib.java" />
+    <JCompile Include="src\fi\lobster\GL2JNIView.java" />
   </ItemGroup>
   <ItemGroup>
-    <JCompile Include="GL2JNIActivity.java" />
-    <JCompile Include="GL2JNILib.java" />
-    <JCompile Include="GL2JNIView.java" />
-    <JCompile Include="src\fi\lobster\AndroidLobster.java" />
+    <ClCompile Include="jni\AndroidLobster.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

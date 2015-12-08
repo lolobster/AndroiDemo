@@ -22,7 +22,7 @@
  {
 	static
 	{
-		System.loadLibrary("gl2jni");
+		System.loadLibrary("AndroidLobster");
 	}
 
 	/**

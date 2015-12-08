@@ -6,7 +6,7 @@
   <!--REGION-BEGIN: The following properties prevents Nsight Tegra from needing to modify user property files.  Setting them here will ensure they always match Visual Studio and allows users to build without needing to check out version controlled files.-->
   <property name="sdk.dir" value="C:\NVPACK\android-sdk-windows" />
   <property name="source.dir" value="C:\\Users\\AleksiNis\\Documents\\GitHub\\AndroiDemo\\AndroidLobster\\AndroidLobster\\src" />
-  <property name="target" value="android-19" />
+  <property name="target" value="android-15" />
   <!--REGION-END-->
   <!--REGION-BEGIN: The following properties prevents Nsight Tegra from needing to modify user manifest files.  Setting them here will ensure they always match Visual Studio and allows users to build without needing to check out version controlled files.-->
   <property name="manifest.file" value="C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\Tegra-Android\Debug\nsight_tegra_manifest.xml" />

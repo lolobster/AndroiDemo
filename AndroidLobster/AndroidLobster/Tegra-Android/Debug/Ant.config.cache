@@ -20,7 +20,7 @@ NativeLibDependencies=
 AssetsDirectories=
 OverrideManifestApiLevels=True
 MinApiLevel=android-9
-TargetApiLevel=android-19
+TargetApiLevel=android-15
 MaxApiLevel=
 SecurePropertiesLocation=
 IsFastDeployEnabled=True
@@ -31,7 +31,9 @@ PreBuildCommand=
 AdditionalOptions=
 
 JavaSources:
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\AndroidLobster.java
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIActivity.java
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNILib.java
+C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIView.java
 
 AndroidBuildSources:
 C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml

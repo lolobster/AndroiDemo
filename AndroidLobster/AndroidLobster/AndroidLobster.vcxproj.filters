@@ -27,24 +27,18 @@
     </AndroidBuild>
   </ItemGroup>
   <ItemGroup>
-    <JCompile Include="src\fi\lobster\AndroidLobster.java">
+    <JCompile Include="src\fi\lobster\GL2JNIActivity.java">
       <Filter>src\fi\lobster</Filter>
     </JCompile>
-    <JCompile Include="GL2JNIActivity.java">
+    <JCompile Include="src\fi\lobster\GL2JNILib.java">
       <Filter>src\fi\lobster</Filter>
     </JCompile>
-    <JCompile Include="GL2JNILib.java">
-      <Filter>src\fi\lobster</Filter>
-    </JCompile>
-    <JCompile Include="GL2JNIView.java">
+    <JCompile Include="src\fi\lobster\GL2JNIView.java">
       <Filter>src\fi\lobster</Filter>
     </JCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="jni\AndroidLobster.cpp">
-      <Filter>jni</Filter>
-    </ClCompile>
-    <ClCompile Include="gl_code.cpp">
       <Filter>jni</Filter>
     </ClCompile>
   </ItemGroup>
