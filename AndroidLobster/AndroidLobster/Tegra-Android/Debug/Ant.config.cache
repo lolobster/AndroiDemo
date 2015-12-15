@@ -2,17 +2,17 @@
 
 Configuration=Debug
 IsNdkBuildProject=False
-SdkRootPath=C:\NVPACK\android-sdk-windows
-ToolRootPath=C:\NVPACK\apache-ant-1.8.2
-JdkRootPath=C:\Program Files\Java\jdk1.7.0_79
+SdkRootPath=F:\Programs\NVIDIA\CodeWorks\android-sdk-windows
+ToolRootPath=F:\Programs\NVIDIA\CodeWorks\apache-ant-1.8.2
+JdkRootPath=F:\Programs\NVIDIA\CodeWorks\jdk1.7.0_71
 ToolchainPlugin=android
-ToolchainRootPath=C:\NVPACK\android-ndk-r10c
-OutputDir=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
-ProjectRoot=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\
+ToolchainRootPath=F:\Programs\NVIDIA\CodeWorks\android-ndk-r10e
+OutputDir=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\Tegra-Android\Debug\
+ProjectRoot=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\
 ProjectName=AndroidLobster
 BuildTarget=Debug
-JavaSourceDir=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src
-AndroidManifestLocation=C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
+JavaSourceDir=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src
+AndroidManifestLocation=F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
 JarDirectories=
 JarDependencies=
 NativeLibDirectories=
@@ -31,13 +31,13 @@ PreBuildCommand=
 AdditionalOptions=
 
 JavaSources:
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIActivity.java
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNILib.java
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIView.java
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIActivity.java
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNILib.java
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\src\fi\lobster\GL2JNIView.java
 
 AndroidBuildSources:
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\AndroidLobster\res\values\strings.xml
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\AndroidManifest.xml
+F:\GitRepos\AndroiDemo\AndroidLobster\AndroidLobster\res\values\strings.xml
 
 Sources:
-C:\Users\AleksiNis\Documents\GitHub\AndroiDemo\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so
+F:\GitRepos\AndroiDemo\AndroidLobster\Tegra-Android\Debug\libAndroidLobster.so
