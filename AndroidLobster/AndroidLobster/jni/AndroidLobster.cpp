@@ -34,7 +34,7 @@ static const char gVertexShader[] =
 static const char gFragmentShader[] =  // SININEN
 "precision mediump float;\n"
 "void main() {\n"
-"	gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0);\n"
+"	gl_FragColor = vec4(1.0, 0.0, 0.2, 1.0);\n"
 "}\n";
 
 static const char gFragmentShader2[] =  // LIILA
@@ -169,16 +169,24 @@ bool setupGraphics(int w, int h)
 }
 
 const GLfloat gTriangleVertices[] = {
-	0.0f, 0.5f, -0.5f,
+	0.0f, 0.2f, -0.5f,
 	-0.5f, 0.5f, -0.5f
 };
+GLfloat Red = 1.0;
+GLfloat Green = 0.0;
+GLfloat Blue = 0.0;
+GLfloat Alpha = 1.0;
+
+bool red = false;
+bool green = false;
+bool blue = false;
 
 void renderFrame()
 {
 	static float angle = 0.01f;
 	GLfloat PI = 3.1415926;
 
-	glClearColor(0.2, 0.2, 0.2, 1.0f);
+	glClearColor(Red, Green, Blue, Alpha);
 	checkGlError("glClearColor");
 	glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
 	checkGlError("glClear");
@@ -196,8 +204,8 @@ void renderFrame()
 			const float gTriangleVertices[] =
 			{
 				cos(angle2)*0.05, sin(angle2)*0.05,
-				cos(angle2 + a - 0.025)*0.9, sin(angle2 + a - 0.025)*0.9,
-				cos(angle2 - a + 0.025)*0.9, sin(angle2 - a + 0.025)*0.9,
+				cos(angle2 + a - 0.1)*0.9, sin(angle2 + a - 0.1)*0.9,
+				cos(angle2 - a + 0.1)*0.9, sin(angle2 - a + 0.1)*0.9,
 			};
 			for (int j = 0; j < 6; j++)
 			{
@@ -235,5 +243,47 @@ JNIEXPORT void JNICALL Java_fi_lobster_GL2JNILib_init(JNIEnv * env, jobject obj,
 
 JNIEXPORT void JNICALL Java_fi_lobster_GL2JNILib_step(JNIEnv * env, jobject obj)
 {
+	////////////////////// RED
+	if (Red < 1.0 && !red)
+	{
+		Red += 0.05;
+	}
+
+	else if (Red >= 1.0 || red)
+	{
+		Red -= 0.05;
+		red = true;
+	}
+	if (Red <= 0.0)
+		red = false;
+
+	//////////////////// GREEN
+	if (Green < 1.0 && !green)
+	{
+		Green += 0.025;
+	}
+	else if (Green >= 1.0 || green)
+	{
+		Green -= 0.025;
+		green = true;
+	}
+	if (Green <= 0.0)
+		green = false;
+
+	///////////////////// BLUE
+	if (Blue < 1.0 && !blue)
+	{
+		Blue += 0.01;
+		
+	}
+	else if (Blue >= 1.0 || blue)
+	{
+		Blue -= 0.01;
+		blue = true;
+	}
+	if (Blue <= 0.0)
+	{
+		blue = false;
+	}
 	renderFrame();
 }
