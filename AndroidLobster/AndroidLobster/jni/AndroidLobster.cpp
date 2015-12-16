@@ -31,13 +31,13 @@ static const char gVertexShader[] =
 	"	gl_Position = vPosition;\n"
 	"}\n";
 
-static const char gFragmentShader[] =  // SININEN
+static const char gFragmentShaderBlue[] =  // SININEN
 "precision mediump float;\n"
 "void main() {\n"
 "	gl_FragColor = vec4(1.0, 0.0, 0.2, 1.0);\n"
 "}\n";
 
-static const char gFragmentShader2[] =  // LIILA
+static const char gFragmentShaderLila[] =  // LIILA
 "precision mediump float;\n"
 "void main() {\n"
 "	gl_FragColor = vec4(0.7, 0.0, 1.0, 1.0);\n"
@@ -127,6 +127,8 @@ GLuint createProgram(const char* pVertexSource, const char* pFragmentSource)
 	return program;
 }
 
+GLfloat mRotationMatrix[16];
+
 GLuint gProgramBlue;
 GLuint gProgramLila;
 GLuint gvPositionHandleBlue;
@@ -142,7 +144,7 @@ bool setupGraphics(int w, int h)
 
 	//////////////////////////// eka shader
 	LOGI("setupGraphics(%d, %d)", w, h);
-	gProgramBlue = createProgram(gVertexShader, gFragmentShader);
+	gProgramBlue = createProgram(gVertexShader, gFragmentShaderBlue);
 	if (!gProgramBlue)
 	{
 		LOGE("Could not create program.");
@@ -153,7 +155,7 @@ bool setupGraphics(int w, int h)
 	LOGI("glGetAttribLocation(\"vPosition\") = %d\n", gvPositionHandleBlue);
 
 	/////////////////// toka shader
-	gProgramLila = createProgram(gVertexShader, gFragmentShader2);
+	gProgramLila = createProgram(gVertexShader, gFragmentShaderLila);
 	if (!gProgramLila)
 	{
 		LOGE("Could not create program.");
@@ -172,6 +174,8 @@ const GLfloat gTriangleVertices[] = {
 	0.0f, 0.2f, -0.5f,
 	-0.5f, 0.5f, -0.5f
 };
+
+
 GLfloat Red = 1.0;
 GLfloat Green = 0.0;
 GLfloat Blue = 0.0;
@@ -184,6 +188,7 @@ bool blue = false;
 void renderFrame()
 {
 	static float angle = 0.01f;
+	angle +=0.01f;
 	GLfloat PI = 3.1415926;
 
 	glClearColor(Red, Green, Blue, Alpha);
@@ -199,13 +204,13 @@ void renderFrame()
 		
 		for (int i = 0; i <= 100; i++)
 		{
-			float angle2 = 2* PI * i / 100;
+			float angle2 = angle* PI * i / 100;  // angle tilalle 2 ja piirtyy kerralla koko ympyrä
 			float a = PI / 100;
 			const float gTriangleVertices[] =
 			{
 				cos(angle2)*0.05, sin(angle2)*0.05,
-				cos(angle2 + a - 0.1)*0.9, sin(angle2 + a - 0.1)*0.9,
-				cos(angle2 - a + 0.1)*0.9, sin(angle2 - a + 0.1)*0.9,
+				cos(angle2 + a - 0.1)*0.6, sin(angle2 + a - 0.1)*0.45,
+				cos(angle2 - a + 0.1)*0.6, sin(angle2 - a + 0.1)*0.45,
 			};
 			for (int j = 0; j < 6; j++)
 			{
@@ -219,6 +224,9 @@ void renderFrame()
 		glDrawArrays(GL_TRIANGLES, 0, 3 * 100);
 		checkGlError("glDrawArrays");
 	};
+
+	float rotAngle = 0.09f;
+	
 
 	glUseProgram(gProgramBlue);
 	checkGlError("glUseProgram");
